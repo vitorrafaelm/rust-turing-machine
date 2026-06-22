@@ -1,10 +1,10 @@
-struct TuringMachine {
+struct TriploBalanceamento {
     input: String,
 }
 
-impl TuringMachine {
+impl TriploBalanceamento {
     fn new(input: &str) -> Self {
-        TuringMachine {
+        TriploBalanceamento {
             input: input.to_string(),
         }
     }
@@ -59,7 +59,7 @@ impl TuringMachine {
 }
 
 fn main() {
-    println!("Máquina de Turing - Linguagem a^n b^n c^n");
+    println!("Triplo balanceamento - Linguagem a^n b^n c^n");
     println!("L = {{a^n b^n c^n | n >= 1}}\n");
 
     // testa algumas palavras
@@ -74,7 +74,7 @@ fn main() {
 }
 
 fn test_word(word: &str, _should_accept: bool) {
-    let mut tm = TuringMachine::new(word);
+    let mut tm = TriploBalanceamento::new(word);
     let result = tm.recognize();
 
     if result {
